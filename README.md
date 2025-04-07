@@ -21,6 +21,11 @@
 1. 새폴더 연결하기(내가 작업하는 환경에서 폴더하나 만들어주기)
 2. `git clone 저장소주소붙여넣기`
 3. `cd TIL(연결하려는 저장소 이름)`
-4. 작업하기
-5. (깃허브 저장) `git add` -> `git commit -m ''` -> `git push origin main`
-6. (학원에서 내려받기) 폴더 연결 -> `git pull origin main`
+4. 자유롭게 수정 후 저장
+5. `git status` 상태확인
+6. `git add .` 스테이징 업로드
+7. `git commit -m '메세지`
+8. `git push origin main` 저장소 업로드
+### (위 이어서) 다른 환경에서 git 이어서 작업하기(학원)
+* 폴더 연결
+* `git pull origin main` 집에서 올린 파일 내려받기
