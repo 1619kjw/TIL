@@ -48,5 +48,5 @@
 2. `<a href="#header"></a>` - 바로가기링크(같은 파일 내 다른 위치 이동)
 3. `<a href="./basic/index.html"></a>` - 상대경로 html이동링크
 4. `<a href="./basic/index.html#main"></a>` - 상대경로링크 + 바로가기링크
-* (html로 이동하는데 html의 특정 id위치로 이동하는, 상대경로롸 바로가기를 합친것. 현재위치에서 basic으로 들어가서 index.html의 id main위치로 바로 가라.)
+* (html로 이동하는데 html의 특정 id위치로 이동하는, 상대경로와 바로가기를 합친것. 현재위치에서 basic으로 들어가서 index.html의 id main위치로 바로 가라.)
 * 1,2 는 같은 파일의 다른위치로 가는것, 3, 4는 다른 파일의 다른위치로 가는것!
