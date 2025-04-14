@@ -1,19 +1,19 @@
-#weather {background-color:rgb(186, 217, 230);}
+#weather {background-color:whitesmoke;}
 #weather h1{color:navy;}
 #weather .area{color:navy;}
 #weather .temperature{color:orange;}
-#weather > p {color:#ddd;}
+#weather > p {color:blue;} /* 여기 잘 모르겠음 */
 #weather .sub_title {background-color:rgb(156, 165, 190);}
-#weather .humidity {background-color:rgb(156, 165, 190);}
+#weather .humidity {background-color:rgb(156, 165, 190); color:blue;}
 #weather .dust {color:black;}
 #weather .result {background-color:#eee; color:black;}
-#news {color:navy;}
-#news a {color:orange;}
-#news .box {}
-#news .box a {}
-#news .box a h2 {}
-#news .box a p {}
-#news p {}
-#news p span {}
+#news {background-color:rgba(0,255,0,0.3);}
+#news > a {color:orange;}
+#news .box {background-color:white;}
+#news .box a {background-color:pink;}
+#news .box a h2 {color:hotpink;}
+#news .box a p {color:red;}
+#news p {color:green;}
+#news p span {color:black;}
 
 
