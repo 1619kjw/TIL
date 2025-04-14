@@ -1,0 +1,9 @@
+#mobile_wrap {background-color:#9ED2EB;}
+#mobile_wrap .photo {}
+#mobile_wrap .photo img {}
+#mobile_wrap h1 {} /* br은 그냥 한줄내리는거니 디자인효과는 없으니까 안써도됨 */
+#mobile_wrap h1 span {}
+#mobile_wrap .h2 {} h2 /* h2 똑같이 2개 들어감. */
+#mobile_wrap .git {}
+#mobile_wrap .skill {}
+#mobile_wrap .skill  li{}

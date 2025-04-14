@@ -1,2 +1,19 @@
-#weather {}
-#weather h1{}
+#weather {background-color:rgb(186, 217, 230);}
+#weather h1{color:navy;}
+#weather .area{color:navy;}
+#weather .temperature{color:orange;}
+#weather > p {color:#ddd;}
+#weather .sub_title {background-color:rgb(156, 165, 190);}
+#weather .humidity {background-color:rgb(156, 165, 190);}
+#weather .dust {color:black;}
+#weather .result {background-color:#eee; color:black;}
+#news {color:navy;}
+#news a {color:orange;}
+#news .box {}
+#news .box a {}
+#news .box a h2 {}
+#news .box a p {}
+#news p {}
+#news p span {}
+
+
