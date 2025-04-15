@@ -1,9 +1,69 @@
-#mobile_wrap {background-color:#9ED2EB;}
-#mobile_wrap .photo {}
+#mobile_wrap {
+    background-color:#9ED2EB;/* mobile_wrap */
+    width:440px; height:956px;/* mobile_wrap */
+    text-align:center;/* 자식,자손 정렬 */
+    font-family:'Pretendard', sans-serif;/* 자식,자손 글꼴통일 */
+    /* 안쪽 자식들한테 공통으로 적용할 값을 써주기_정렬,글꼴 */
+}
+#mobile_wrap .photo {
+    margin-top:110px;
+    margin-bottom:39px;
+    /* 테두리값 빼고 써주기 */
+    display:inline-block;
+    /* 인라인과 블록을 같이 인식 */
+}
+    /* 여기는 자식,자손한테 상속하려고 적은 것 없음 */
 #mobile_wrap .photo img {}
-#mobile_wrap h1 {} /* br은 그냥 한줄내리는거니 디자인효과는 없으니까 안써도됨 */
-#mobile_wrap h1 span {}
-#mobile_wrap .h2 {} h2 /* h2 똑같이 2개 들어감. */
-#mobile_wrap .git {}
+    /* 선택자에 모든 값을 쓸 필요는 없음.지우진 말고 비워두기 */
+#mobile_wrap h1 {
+    /* 글꼴 부모 상속 상태-생략 */
+    font-size:1.5rem;
+    font-weight:400;
+    line-height:1;
+    letter-spacing:-0.02rem;
+    color:#000;
+    margin-bottom:54px;
+    width:319px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
+/* br은 그냥 한줄내리는거니 디자인효과는 없으니까 안써도됨 */
+#mobile_wrap h1 span {
+    /* 기존에 h1에 썼던 거에서 다른 것만 쓰면됨 */
+    /* 글꼴,행간,자간 상속상태-생략*/
+    font-size:2.25rem;
+    font-weight:600;
+    /* 여기 글자 2줄로 떨어지는거 못고쳤음..자간이나 너비 조절하기 */
+}
+#mobile_wrap h2 {
+    line-height:1.5;
+    font-size:1.375rem;
+    font-weight:500;
+    letter-spacing:-0.02em;
+    width:241px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+} /* h2 똑같이 2개 들어감. */
+#mobile_wrap .git {
+    line-height:1.5;
+    font-size:1.25rem;
+    font-weight:500;
+    letter-spacing:-0.02em;
+    width:241px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
 #mobile_wrap .skill {}
-#mobile_wrap .skill  li{}
+#mobile_wrap .skill li{
+    line-height:1.5;/* li에 쓰면 부모한텐 따로 안해도됨 */
+    font-size:1.25rem;
+    font-weight:500;
+    letter-spacing:-0.02em;
+    width:241px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+}
