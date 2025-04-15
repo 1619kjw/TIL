@@ -23,7 +23,9 @@
     letter-spacing:-0.02rem;
     color:#000;
     margin-bottom:54px;
-    width:319px;
+    width:350px;
+    /* 피그마에서는 잘 됐는데 고라이브로 봤을때 2줄로 떨어졌었음.
+    너비를 더 넓히니까 한줄로 적용됨! 피그마랑 css랑 뭐가 다른가... */
     margin-left:auto;
     margin-right:auto;
     text-align:left;
