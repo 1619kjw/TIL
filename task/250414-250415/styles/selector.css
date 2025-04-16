@@ -13,7 +13,8 @@
 #news .box a {background-color:pink;}
 #news .box a h2 {color:hotpink;}
 #news .box a p {color:red;}
-#news p {color:green;}
-#news p span {color:black;}
+#news > p {color:green;}
+#news > p span {color:black;}
+/* 16,17번은 news의 자식 p니까 꺽쇠표시! */
 
 
