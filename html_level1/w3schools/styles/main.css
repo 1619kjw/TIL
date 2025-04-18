@@ -1,30 +1,36 @@
 #wrap {
     width:440px; height:956px;
-    padding-left:15px;
-    padding-right:15px;
+    /* padding-left:15px;
+    padding-right:15px; */
+    padding:0 15px;/* 상하값0, 좌우값15px */
     /* 자식들에서 가운데 정렬은 3개밖에 없기 때문에 부모에서 안줬음 */
 }
 #wrap h1 {
-    padding-top:156px;
-    padding-bottom:30px;
+    /* padding-top:156px;
+    padding-bottom:30px; */
+    padding:156px 0 30px; /* 상 156, 좌우값0, 하30px */
     font-size:2.5rem; /* 40px */
     font-weight:700; /* bold */
 }
 #wrap > p {} /* #wrap 모든 자식 p */
 #wrap h1+p {
     font-size:1rem;
-    margin-bottom:62px;
+    /* margin-bottom:62px; */
+    margin:0 0 62px; /* 상0 좌우0 하62 */
 }/* #wrap의 h1 옆에 p */
-#wrap #login_frm {}
+#wrap #login_frm {
+}
 #wrap #login_frm h2 {
     font-size:1.375rem;
     font-weight:600;
-    margin-bottom:13px;
+    /* margin-bottom:13px; */
+    margin:0 0 13px; /* 상0 좌우0 하13 */
     color:#3A59D1;
 }
 #wrap #login_frm p {}
 #wrap #login_frm p.user_in {
-    margin-bottom:40px;
+    /* margin-bottom:40px; */
+    margin:0 0 40px;
 }/* 여기서 p를 쓰면 p에 class준거구나 표시할 수 있음 */
 #wrap #login_frm p.user_btn {margin-bottom:13px;}
 #wrap #login_frm p input::placeholder {
@@ -34,10 +40,11 @@
 }
 #wrap #login_frm p input {
     width:410px;
-    padding-left:20px;
+    /* padding-left:20px;
     padding-right:20px;
     padding-top:15px;
-    padding-bottom:15px;
+    padding-bottom:15px; */
+    padding:15px 20px;
     /* padding-top,bottom으로 했으니까 높이는 설정안해도 됨. 피그마에서도 높이를 허그 설정 했음. 여백으로 하면서 내용만큼 알아서 늘어나게 하겠다 */
     /* border:선두께 선모양 선색상; */
     border:1px solid #000;
@@ -47,10 +54,11 @@
 }
 #wrap #login_frm p #login_btn {
     width:410px;
-    padding-left:20px;
+    /* padding-left:20px;
     padding-right:20px;
     padding-top:15px;
-    padding-bottom:15px;
+    padding-bottom:15px; */
+    padding:15px 20px;
     border:1px solid #000;
     border-radius:15px;
     font-weight:600; font-size:0.875rem;
@@ -58,10 +66,11 @@
 }
 #wrap #login_frm p .login_google {
     width:410px;
-    padding-left:20px;
+    /* padding-left:20px;
     padding-right:20px;
     padding-top:15px;
-    padding-bottom:15px;
+    padding-bottom:15px; */
+    padding:15px 20px;
     border:1px solid #000;
     border-radius:15px;
     display:block; text-align:center;
@@ -71,7 +80,8 @@
     text-align:center;
     font-size:0.75rem;
     font-weight:300;
-    margin-top:123px;
+    /* margin-top:123px; */
+    margin:123px 0 0; /* 상 , 좌우, 하 이렇게 순서가 되는 것 같음 */
     letter-spacing:0; /* 0일때는 단위를 안적어도 됨 */
 }/* #wrap의 login_frm 옆에 p */
 #wrap #login_frm+p .sign_up {

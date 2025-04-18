@@ -5,16 +5,19 @@
     text-align:center;/* 수평 가운데정렬. text-align은 자식자손(인라인)에게 적용됨 */
 }
 #wrap h1 {/* 이미지태그에 쓰는게 아니라 먼저 보이는 태그에 값을 쓴다. */
-    padding-top:357px;
+    /* padding-top:357px; */
     /* 패딩이 안쪽, 마진이 바깥쪽 여백. 마진으로 했을때 밀리면 패딩으로 주기. 마진으로 주면 배경의 바깥쪽 여백이라고 잘못 인식하는 경우가 있어서 패딩으로 바꿔주기 */
-    padding-bottom:135px;
+    /* padding-bottom:135px; */
+    padding:357px 0 0;
+    margin:0 0 135px 0;
 }
 #wrap h1 img {}
 #wrap .btn_wrap {
     width:300px;
     /* 블록의 너비값을 부모보다 작게 설정했을 때 블록을 가운데정렬하고 싶다면? */
-    margin-left:auto;
-    margin-right:auto;
+    /* margin-left:auto;
+    margin-right:auto; */
+    margin:0 auto;
     text-align:left;/* btn_wrap의 인라인 자식, 자손 왼쪽정렬 */
 }
 /* 공통 태그 선택자 a를 만들어서,같은 값 주고 싶으면 여기에 쓰기 */
@@ -34,8 +37,9 @@
 #wrap .btn_wrap .sign_up_btn {
     height:40px;
     line-height:40px;
-    margin-top:16px;
-    margin-bottom:16px;
+    /* margin-top:16px;
+    margin-bottom:16px; */
+    margin:16px 0;
     background-color:#fff;
     /* border:선두께 선모양 선색상; */
     border:1px solid #000;
