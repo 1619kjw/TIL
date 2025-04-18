@@ -1,77 +1,79 @@
 #wrap {
-    width:440px;
-    height:956px;
+    width:440px; height:956px;
     padding-left:15px;
     padding-right:15px;
-    text-align:center;
+    /* 자식들에서 가운데 정렬은 3개밖에 없기 때문에 부모에서 안줬음 */
 }
 #wrap h1 {
-    font-size:2.5rem;
-    font-weight:700;
     padding-top:156px;
     padding-bottom:30px;
-    text-align:left;
+    font-size:2.5rem; /* 40px */
+    font-weight:700; /* bold */
 }
-/* #wrap > p {} : 
-#wrap 모든 자식 p */
+#wrap > p {} /* #wrap 모든 자식 p */
 #wrap h1+p {
     font-size:1rem;
     margin-bottom:62px;
-    text-align:left;
 }/* #wrap의 h1 옆에 p */
-#wrap #login_frm {
-    width:410px;
-}
+#wrap #login_frm {}
 #wrap #login_frm h2 {
     font-size:1.375rem;
     font-weight:600;
-    color:#3A59D1;
     margin-bottom:13px;
-    text-align:left;
+    color:#3A59D1;
 }
-#wrap #login_frm p {
-    
+#wrap #login_frm p {}
+#wrap #login_frm p.user_in {
+    margin-bottom:40px;
+}/* 여기서 p를 쓰면 p에 class준거구나 표시할 수 있음 */
+#wrap #login_frm p.user_btn {margin-bottom:13px;}
+#wrap #login_frm p input::placeholder {
+    font-size:0.875rem;
+    font-weight:300;
+    color:#272727;
 }
 #wrap #login_frm p input {
     width:410px;
-    height:44px;
-    /* border:선두께 선모양 선색상; */
-    border:1px solid #000;
-    font-size:0.875rem;
-    font-weight:300;
-    border-radius:15px;
     padding-left:20px;
     padding-right:20px;
     padding-top:15px;
     padding-bottom:15px;
-    margin-bottom:40px;
+    /* padding-top,bottom으로 했으니까 높이는 설정안해도 됨. 피그마에서도 높이를 허그 설정 했음. 여백으로 하면서 내용만큼 알아서 늘어나게 하겠다 */
+    /* border:선두께 선모양 선색상; */
+    border:1px solid #000;
+    border-radius:15px;
+    color:#3A59D1;
+    /* 글자를 입력할때 색깔을 주고 싶으면 color를 쓰면 됨 */
 }
 #wrap #login_frm p #login_btn {
     width:410px;
-    height:44px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:15px;
+    padding-bottom:15px;
     border:1px solid #000;
-    font-size:0.875rem;
-    font-weight:500;
     border-radius:15px;
-    background-color:#272727;
-    color:#fff;
+    font-weight:600; font-size:0.875rem;
+    background-color:#FFA955; color:#fff;
 }
 #wrap #login_frm p .login_google {
     width:410px;
-    height:44px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:15px;
+    padding-bottom:15px;
     border:1px solid #000;
-    font-size:0.875rem;
-    font-weight:500;
     border-radius:15px;
-    display:block;
-    margin-top:13px;
-    line-height:44px;
+    display:block; text-align:center;
+    font-weight:600; font-size:0.875rem;
 }
 #wrap #login_frm+p {
     text-align:center;
     font-size:0.75rem;
+    font-weight:300;
     margin-top:123px;
+    letter-spacing:0; /* 0일때는 단위를 안적어도 됨 */
 }/* #wrap의 login_frm 옆에 p */
 #wrap #login_frm+p .sign_up {
-    font-weight:500;
+    font-weight:600;
 }

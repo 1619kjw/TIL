@@ -1,7 +1,6 @@
 /* index.css */
 #wrap {
     /* background-color:#fff; */
-    background-color:aqua;
     width:440px; height:956px;/* 프레임크기 지정 */
     text-align:center;/* 수평 가운데정렬. text-align은 자식자손(인라인)에게 적용됨 */
 }
@@ -26,8 +25,9 @@
 #wrap .btn_wrap .login_btn {
     height:40px;
     line-height:40px;
-    background-color:#272727;
+    background-color:#FFA955;
     color:#fff;
+    border:1px solid #000;
     border-radius:15px;
     font-size:0.875rem;/* 14px */
 }
