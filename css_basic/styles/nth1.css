@@ -1,0 +1,30 @@
+/* nth1.css */
+table, tr, td {border:1px solid #000; border-collapse:collapse;}/* 공통선택자 */ /* 이중선없애기 */
+#t {width:300px; height:300px;} /* 테이블은 안에 내용을 적으면 내용만큼 늘어나지만 크기를 적용하면 균등하게 알아서 늘어남. 테이블에만 쓴건데도 td가 함께 늘어남 */
+#t tbody {}
+#t tbody tr {}
+#t tbody tr td {}
+/* #t tbody tr:nth-child(1) td:nth-child(1) {background-color:yellow;} */
+/* 수열선택자 쓸 때 공백주지 않도록 주의. 첫번째 tr의 첫번째 td */
+#t tbody tr:first-child td:first-child {background-color:coral;}
+#t tbody tr:nth-child(2) td:nth-child(2) {background-color:orange;}
+/* #t tbody tr:last-child td:last-child {background-color:yellow;} */
+#t tbody tr:nth-child(3) td:nth-child(3) {background-color:palevioletred;}
+/* .box h2:nth-child(3) {background-color:aqua;} */
+.box h2:nth-of-type(1) {background-color:violet;}
+.box h2:first-of-type {font-weight:800;}
+/* .box p:nth-child(5) {background-color:red;} */
+.box p:nth-of-type(3) {background-color:blue;}
+.list {}
+.list li {
+    width:50px; 
+    height:50px;
+    border:1px solid #000; 
+    font-size:0.75rem; 
+    display:inline-block; /* 글자 옆으로 가고, 크기 인식 */
+    text-align:center;
+    line-height:50px;}/* 글자가 한줄이면서 높이고정 */
+/* .list li:nth-child(2n) {background-color:chartreuse;} */
+/* .list li:nth-child(3n+2) {background-color:chartreuse;} */
+/* .list li:nth-child(odd) {background-color:pink;} */
+.list li:nth-child(even) {background-color:lightgreen;}

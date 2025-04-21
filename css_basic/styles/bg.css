@@ -1,0 +1,36 @@
+.bg {
+    width:1000px;
+    height:1000px;
+    background-repeat:no-repeat;
+}
+.bg1 {
+    /* background-color:yellow;
+    background-image:url(https://i.pinimg.com/236x/8f/d7/64/8fd764abefbd16186384e67b08703e4d.jpg);
+    /* background-repeat:no-repeat; */
+    /* background-position:left center; */
+    /* background-size:contain; */
+    /* background-size:cover; */
+    /* background-size:auto 90%; */
+    background:yellow url(https://i.pinimg.com/236x/8f/d7/64/8fd764abefbd16186384e67b08703e4d.jpg) right center / cover;
+}
+.bg2 {
+    background:aqua url(../images/test.jpg) no-repeat 100px 200px / contain;
+    /* background-color:aqua;
+    background-image:url(../images/test.jpg);
+    /* background-repeat:no-repeat; */
+    /* background-position:0 0;left top */
+    /* background-size:contain; */
+    /* background-size:cover;  */
+    /* background-position:100px 200px; */
+    /* background-position:100px -100px; */
+    /* background-position:30% 50%; */
+} /* x축에서 왼쪽으로 100, y축에서 밑으로 200떨어져있음. 음수를 쓰면 반대쪽으로 움직임 음수값을 너무 많이 쓰면 아예 화면밖으로 넘어가서 안보이니까 조심. */
+.bg3 {
+    /* height:3000px;
+    background-image:url(https://i.pinimg.com/736x/29/68/0a/29680aabe1fcb6692cfed3254eab88d9.jpg);
+    background-color:blueviolet;
+    background-position:50% 100px; */
+    /* background-size:contain; */
+    /* background-attachment:fixed; */
+    background:yellowgreen url(https://i.pinimg.com/736x/29/68/0a/29680aabe1fcb6692cfed3254eab88d9.jpg) no-repeat 50% 100px / cover;
+}
