@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 | Spotify</title>
+    <!-- 웹글꼴 Noto Sans KR로 연결 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="./styles/reset.css" rel="stylesheet">
+    <link href="./styles/index.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1><a href="#"><img src="./images/logo.png" alt="spotify"></a></h1>
+        <section>
+            <!-- 탭 제목 -->
+            <div class="tab_title">
+                <a href="#" class="sign_in active"><span>sign in</span></a>
+                <a href="#" class="sign_up"><span>sign up</span></a>
+            </div>
+            <!-- 탭 내용 -->
+            <div class="tab_container">
+                <!-- sign_in 클릭 시 열리는 내용 -->
+                <form action="#" method="post" id="login_frm">
+                    <div class="id_pw"> <!-- 입력양식에서 name은 그룹이 아니라 전송값이다 -->
+                        <input type="text" name="user_name" placeholder="Username">
+                        <input type="password" name="user_pw" placeholder="Password">
+                    </div>
+                    <!-- 한줄이라서 그냥 p로 씀. div한다고 틀린건 아님. 다양하게 써본것! -->
+                    <p class="login_stay"> <!-- 선택양식이니까 name은 그룹이다 -->
+                        <input type="checkbox" value="user_stay_on" name="user_stay" id="user_stay_on">
+                        <label for="user_stay_on">stay signed in</label>
+                    </p>
+                    <div class="btn_search">
+                        <button type="submit" id="sign_in_btn">sign in</button>
+                        <a href="#" class="pw_search">Forget Password?</a>
+                    </div>
+                </form>
+                <!-- sign_up 클릭 시 열리는 내용. 일단은 보이는 부분만 만들거여서 여기는 안적음 -->
+                <form action="#" method="post" id="join_frm"></form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
