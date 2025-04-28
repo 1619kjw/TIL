@@ -23,7 +23,7 @@ main #login_frm .member_info {
     overflow:hidden;
 }
 main #login_frm .member_info dt {
-    width:200px; background-color:lime;
+    width:200px;
     float:left; clear:both;
 }
 main #login_frm .member_info dd {
@@ -33,12 +33,10 @@ main #login_frm .member_info dd {
 /* 홀수 짝수니까 odd,even이라고 써도됨 */
 main #login_frm .member_info dd:nth-of-type(2n+1) {
     width:650px;
-    background-color:yellow;
 }
 /* 중복확인, 인증번호받기를 담은 세번째 dd 선택자 */
 main #login_frm .member_info dd:nth-of-type(2n) {
     width:150px;
-    background-color:skyblue;
 }
 /* ====================================나머지 자식, 자손 개별 선택자 */
 main #login_frm .member_info dt em {}
@@ -51,27 +49,101 @@ main #login_frm .member_info dd input[name^=user] {
 }
 /* ===================================개별속성(id) */
 main #login_frm .member_info dd input[name$=id] {} 
-/* ========================오른쪽 중복확인, 인증번호 버튼 묶음 선택자 */
-main #login_frm .member_info dd:nth-of-type(2n) .btn {background-color:red;}
-/* 휴대폰, 주소, 성별, 생년월일 선택자 */
-main #login_frm .member_info dd select[name^=news] {}
+/* ===========================오른쪽 중복확인, 인증번호 버튼 묶음 선택자 */
+main #login_frm .member_info dd:nth-of-type(2n) {
+    text-align:right; /* 버튼을 정렬하고 싶으면 부모에게 text-align을 줘야함. 버튼은 인라인이니까 적용됨. 폼, 버튼 관련은 다 인라인이고, 필드셋만 블록임. */
+}
+main #login_frm .member_info dd:nth-of-type(2n) .btn {
+    background-color:#5f0080; color:#fff;
+    width:90%; height:45px; border-radius:5px;
+}
+main #login_frm .member_info dd:nth-of-type(2n) .btn:hover {
+    filter:brightness(110%);
+    /* 마우스 올렸을 때 좀 밝아져서 선택된다는 것을 표시해줌. 간단한 필터는 포토샵, 피그마없이도 css에서 제어할수 있다
+    기본이 100%이다. 너무 과하게 하는 것보다 살짝 해주는 게 좋음. */
+}
+/* ==================휴대폰, 주소, 성별, 생년월일 선택자 */
+main #login_frm .member_info dd select[name^=news] {
+    width:60px; border:1px solid #ccc;
+    border-radius:4px; padding:4px; font-size:0.875rem; height:50px;
+    float:left;
+    margin-right:5px;
+    background:#fff url(../images/ico_down_16x10.png) no-repeat 92% center / 10px;
+}
 main #login_frm .member_info dd select[name^=news] option {}
-main #login_frm .member_info dd input[name*=phone] {}
-/* ========================인증번호 버튼 개별 선택자 */
-main #login_frm .member_info dd #authentication_btn {background-color:coral;}
-/* 주소, 성별, 생년월일 선택자 */
+main #login_frm .member_info dd input[name*=phone] {
+    float:left;
+    width:calc(90% - 65px);
+}
+/* ==========================인증번호 버튼 개별 선택자 */
+main #login_frm .member_info dd #authentication_btn {background-color:#ccc;}
+/* 주소 선택자 */
 main #login_frm .member_info dd #address_search_btn {
-    
+    border:1px solid #5f0080;
+    background-color:#fff;
+    width:90%; padding:12px 0;
+    border-radius:4px;
 }
 main #login_frm .member_info dd #address_search_btn + span {
     /* 옆이라는 걸 표시하고 싶어서 +를 안지우고 넣음 */
+    display:block; color:#aaa;
 }
-main #login_frm .member_info dd input[name=gender] {}
+/* 성별 선택자 */
+/* dd중에 이것만 가운데정렬하기 위해 html에서 class줌 */
+main #login_frm .member_info .gender_g {text-align:center;}
+main #login_frm .member_info dd input[name=gender] {
+    display:none;
+}
 main #login_frm .member_info dd input[name=gender] + label {
     /* 옆이라는 걸 표시하고 싶어서 +를 안지우고 넣음 */
+    /* 비활성화 디자인 */
+    /* background-image:url(../images/check_state.svg); */
+    background-image:url(../images/check_state.svg);
+    background-repeat:no-repeat;
+    background-size:15px;
+    background-position:0 3px;
+    padding-left:25px;
+    margin-right:30px;
 }
-main #login_frm .member_info dd input[name^=birthday] {}
+main #login_frm .member_info dd input[name=gender] + label:last-of-type {/* 선택안함 오른쪽여백 없애기 */margin-right:0;}
+main #login_frm .member_info dd input[name=gender]:checked + label {
+    /* 옆이라는 걸 표시하고 싶어서 +를 안지우고 넣음 */
+    /* 활성화 디자인 */
+    /* background-image:url(../images/check_state_on.png); */
+    background-image:url(../images/check_state_on.png); /* no-repeat left center / 15px; 위에 기존 label에서 변경되는 속성만 쓰기. */
+}
+/* 생년월일 선택자 */
+main #login_frm .member_info .gender_g ~ dd {text-align:center;}
+main #login_frm .member_info dd:nth-last-of-type(2) {
+    background-color:#fff;
+    border:1px solid #5f0080;
+    border-radius:4px;
+    width:calc(650px * 0.9); padding:8px 0; /* 글자위아래 여백이 있어서 박스크기를 줄이려면 여백을 줄이거나, 글자크기를 줄이거나 하면됨 */
+}
+main #login_frm .member_info dd input[name^=birthday] {
+    width:60px; text-align:center;
+    
+}
+main #login_frm .member_info dd:nth-last-of-type(2) span::after {
+    content:'/';
+    display:inline-block;
+    font-size:14px; color:#aaa; margin:0 3px;
+}
+main #login_frm .member_info dd:nth-last-of-type(2) span:last-child::after {display:none; /* 선택자 추가:DD옆에 있는 슬래시를 없애줌 */}
 /* ==========================가입버튼 */
+main #login_frm > .btn {
+    text-align:center; margin:50px 0 0;
+}
+main #login_frm .btn #sign_up_btn {
+    background-color:#5f0080; color:#fff;
+    width:250px; padding:14px 0; /* heigth도 해도됨 */
+    border-radius:10px;
+}
+main #login_frm .btn #sign_up_btn:hover {
+    filter:brightness(110%);
+}
+
+/* 이 아래건 뭐지??연습인가? */
 main #login_frm .member_info dd #id_overlap_btn {}
 main #login_frm .member_info dd select {}
 main #login_frm .member_info dd select option {}
