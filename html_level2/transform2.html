@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        #parent {
+            background-color:#eee; padding:40px;
+        }
+        #parent .child {
+            width:150px; height:150px; /* transform 적용 전 크기 기본세팅 */
+            border:1px solid #000;
+        }
+        #parent .child1 {
+            transition:transform 1s;
+            transform-origin:right center;
+        }/* 속성을 쓰는거라 scale말고 transform을 써야함 */
+        #parent:hover .child1 {
+            transform:scaleX(1.5);
+        }
+        #parent .child2 {
+            position:relative; left:0; top:0;
+            transition:all 0.5s;
+            transform-origin:right bottom;/* 오른쪽 아래로 중심축 바꿈 */ 
+        }
+        #parent:hover .child2 {
+            /* transform:rotate(-180deg); */
+            /* transform:skewX(50deg); */
+            /* transform:translate(50px, -20px); = position:relative; left:50px; top:-20px; */
+            left:50px; top:-20px;
+        }
+        /* 내비게이션 만들기 */
+        nav {}
+        nav .gnb {
+            display:flex;
+        }
+        nav .gnb > li {
+            width:400px;
+            background-color:#333;
+            position:relative;
+        }
+        nav .gnb > li:hover .lnb {
+            /* display:block; */
+            transform:scaleY(1) translateY(0);
+            opacity:1;
+        }
+        nav .gnb > li > a {
+            /* 글자는 꾸밀때 글자의 가장 가까운 곳에다가 해야함 */
+            color:#fff;
+            display:block;/* 마우스 올렸을때 선택영역이 글자만이 아니라 옆 공간에도 다 잡히도록 */
+            text-align:center;
+            line-height:40px; /* 높이를 안줬으니까, 40px의 중앙에 배치됨 */
+        }
+        nav .gnb > li > .lnb {
+            position:absolute;/* 서브메뉴가 배경과 겹치니까 absolute주기 */
+            left:0; top:40px;/* a한테 준 행간 40px만큼 띄어줘야 겹치지 않음 */
+            background-color:aqua;
+            width:100%; /* 여기에 400px입력하면 나중에 유지보수할때 값을 일일히 바꿔야 해서 불편함 */
+            /* display:none; 초기 숨기기 */
+            transform:scaleY(0) translateY(-50px);
+            opacity:0;
+            transition:all 0.3s;
+            transform-origin:left top;/* 중심축 바꾸기 */
+            /* scaleY(0) 숨기기, scaleY(1) 보이기 */
+            /* scaleX(0) 숨기기, scaleX(1) 보이기 */
+        }
+        nav .gnb > li > .lnb li {}
+        nav .gnb > li > .lnb li a {
+            /* 글자 꾸밀 땐 가장 가까운 곳에 */
+            display:block;
+            text-align:center;
+            line-height:25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="child child1"></div>
+        <div class="child child2"></div>
+    </div>
+    <hr>
+    <nav>
+        <ul class="gnb">
+            <li><a href="#">메인메뉴1</a>
+                <ul class="lnb">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메인메뉴2</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

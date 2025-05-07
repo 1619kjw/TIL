@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gradient | css</title>
+    <link rel="stylesheet" href="../css_basic/styles/reset.css">
+    <style>
+        .btn {
+            display:block; /* 버튼도 원래는 인라인이라고함 */
+            border:1px solid #000;
+            width:400px; height:200px;
+        }
+        #btn1 {
+            /* gradient 사용 시 -color 없이 통합 background로 명령한다. */
+            background:linear-gradient(45deg, #eee, rgba(255,0,0,0.5), rgba(255,0,255,0.5));
+            background-size:400%;
+            transition:all 1s;
+        }
+        #btn1:hover {
+            background-position:100% 0;
+        }
+        h1 {
+            text-transform:uppercase;
+            font-size:2.5rem;
+            font-weight:800;
+            background:linear-gradient(90deg, purple, darkblue, #555, brown);
+            /* display:inlline-block; */
+            width:max-content;
+            background-size:400%;
+            /* gradient 색상을 글자에 적용하기 위한 방법(마스크구조) */
+            color:transparent;
+            background-clip:text;/* 클리핑마스크로 글자에 한다 */
+            transition:all 1s;/* 마우스 올리면 색깔이 움직이게 하기. 글자는 가만히 있고. */
+        }  
+        h1:hover {background-position-X:100%;}
+        h2 {
+            font-size:5rem;
+            font-weight:800;
+            background:linear-gradient(45deg, #DE689B, #EDDD53, #53EDEA);
+            width:max-content;
+            background-size:400%;
+            color:transparent;
+            background-clip:text;
+            transition:all 3s;
+        }
+        h2:hover {background-position-X:100%;}
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1" class="btn">Hover me!</button>
+    <h1>HTML & CSS & Javascript & Figma & react</h1>
+    <h2>글자 안에서 색깔이 움직이게 하는 방법을 알아보자!<br>그라데이션 효과 연습하기</h2>
+</body>
+</html>
