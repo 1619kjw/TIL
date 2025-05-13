@@ -1,0 +1,8 @@
+@keyframes tire {
+    from {transform:rotate(0);}
+    to {transform:rotate(360deg);}
+}
+@keyframes bg {
+    from {background-position-x:0;}
+    to {background-position-x:1000px;}
+}
