@@ -42,6 +42,11 @@
             background:url(images/bg_flow.png) repeat-x left top;
             height:150px; width:100%;
             position:absolute; z-index:30;
+            animation:txt 15s linear infinite;
+        }
+        @keyframes txt {
+            from {background-position-x:0;}
+            to {background-position-x:1000px;}
         }
     </style>
 </head>
@@ -53,7 +58,8 @@
     <main>
         <div class="center">
             <div class="video_bg">
-                <video src="video/golden.mp4" autoplay muted loop></video>
+                <!-- <video src="video/golden.mp4" autoplay muted loop></video> -->
+                <video src="https://cdn.pixabay.com/video/2021/11/23/98756-649311270_tiny.mp4" autoplay muted loop></video>
                 <img src="images/img_intro.png" alt="">
             </div>
             <div class="txt_bg_ani"></div>
